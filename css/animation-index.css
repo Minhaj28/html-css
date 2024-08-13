@@ -1,0 +1,54 @@
+  /* Slide-in animation for text content */
+  @keyframes slideInLeft {
+    0% {
+      transform: translateX(-10%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  /* Slide-in animation for image content */
+  @keyframes slideInRight {
+    0% {
+      transform: translateX(10%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInBottom {
+    0% {
+        transform: translatey(15%);
+      }
+      100% {
+        transform: translateX(0);
+      }
+  }
+  
+  /* Apply the animations */
+  .text-content.animate  {
+    animation: slideInLeft 1s ease-in-out forwards;
+  }
+  
+  .image-content.animate  {
+    animation: slideInRight 1s ease-in-out forwards;
+  }
+
+  .gallery-row.animate {
+    animation: slideInLeft 1s ease-in-out forwards;
+  }
+
+  .platform-text.animate {
+    animation: slideInLeft 1s ease-in-out forwards;
+  }
+
+  .platform-image.animate {
+    animation: slideInRight 1s ease-in-out forwards;
+  }
+
+  .container.animate{
+    animation: slideInBottom 1s ease-in-out forwards;
+  }
+  

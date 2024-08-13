@@ -9,6 +9,7 @@
     <title>eznatal-AI + CRM Solution for Birth Centers</title>
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/animation-index.css" />
   </head>
   <body>
     <header class="header">
@@ -538,7 +539,7 @@
       window.addEventListener("scroll", function () {
         const scrollTop =
           window.pageYOffset || document.documentElement.scrollTop;
-        const viewportHeight = window.innerHeight/2;
+        const viewportHeight = window.innerHeight / 2;
 
         if (scrollTop > viewportHeight) {
           // Scrolled more than 100vh
@@ -555,6 +556,41 @@
           document.querySelector(".upper-header").classList.toggle("active");
           document.querySelector(".menu-container").classList.toggle("active");
         });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const textContent = document.querySelector(".text-content");
+        const imageContent = document.querySelector(".image-content");
+        const galleryRow = document.querySelector(".gallery-row");
+        const textPlatform = document.querySelector(".platform-text");
+        const imagePlatform = document.querySelector(".platform-image");
+        const container = document.querySelector(".container");
+
+
+
+
+        const observerOptions = {
+          root: null, // Use the viewport as the container
+          threshold: 0.1, // Trigger when 10% of the element is visible
+        };
+
+        const observer = new IntersectionObserver(function (entries, observer) {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("animate");
+              observer.unobserve(entry.target); // Stop observing once animation is triggered
+            }
+          });
+        }, observerOptions);
+
+        observer.observe(textContent);
+        observer.observe(imageContent);
+        observer.observe(galleryRow);
+        observer.observe(textPlatform);
+        observer.observe(imagePlatform);
+        observer.observe(container);
+
+
+      });
     </script>
   </body>
 </html>
