@@ -40,14 +40,40 @@
               <li class="nav-item"><a href="#">How it works</a></li>
               <li class="nav-item"><a href="#">What you get</a></li>
               <li class="nav-item"><a href="#">Things we do</a></li>
-              <li class="nav-item"><a href="#">Resources</a></li>
+              <li class="nav-item dropdown">
+                <a href="#">Resources</a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-menu-item"><a href="#">Resource 1</a></li>
+                  <li class="dropdown-menu-item"><a href="#">Resource 2</a></li>
+                  <li class="dropdown-menu-item"><a href="#">Resource 3</a></li>
+                </ul>
+              </li>
               <li class="nav-item"><a href="#">Why eznatal</a></li>
             </ul>
           </div>
           <div class="cta-button">
             <button class="btn-get-started">Get Started</button>
           </div>
+          <div class="menu-icon">
+            <i class="fa fa-bars"></i>
+          </div>
         </div>
+      </div>
+      <div class="menu-container">
+        <ul class="menu-list">
+          <li class="menu-item"><a href="#">How it works</a></li>
+          <li class="menu-item"><a href="#">What you get</a></li>
+          <li class="menu-item"><a href="#">Things we do</a></li>
+          <li class="menu-item dropdown-2">
+            <a href="#">Resources</a>
+            <ul class="dropdown-menu-2">
+              <li class="dropdown-menu-item"><a href="#">Resource 1</a></li>
+              <li class="dropdown-menu-item"><a href="#">Resource 2</a></li>
+              <li class="dropdown-menu-item"><a href="#">Resource 3</a></li>
+            </ul>
+          </li>
+          <li class="menu-item"><a href="#">Why eznatal</a></li>
+        </ul>
       </div>
     </header>
 
@@ -498,7 +524,7 @@
       </div>
     </footer>
     <div class="up-arrow">
-      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+      <i class="fa fa-arrow-up"></i>
     </div>
 
     <script>
@@ -506,6 +532,29 @@
         var currentYear = new Date().getFullYear();
         document.getElementById("currentYear").textContent = currentYear;
       });
+
+      const upArrow = document.querySelector(".up-arrow");
+
+      window.addEventListener("scroll", function () {
+        const scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+        const viewportHeight = window.innerHeight/2;
+
+        if (scrollTop > viewportHeight) {
+          // Scrolled more than 100vh
+          upArrow.classList.add("show");
+        } else {
+          // Scrolled less than 100vh
+          upArrow.classList.remove("show");
+        }
+      });
+
+      document
+        .querySelector(".menu-icon")
+        .addEventListener("click", function () {
+          document.querySelector(".upper-header").classList.toggle("active");
+          document.querySelector(".menu-container").classList.toggle("active");
+        });
     </script>
   </body>
 </html>

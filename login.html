@@ -18,7 +18,7 @@
         <div class="upper-header-container">
           <div class="header-link">
             <a href=""><i class="fa fa-user" aria-hidden="true"></i></a>
-            <a href="#">Login</a>
+            <a href="login.html">Login</a>
           </div>
           <div class="header-link">
             <a href=""><i class="fa fa-life-ring" aria-hidden="true"></i></a>
@@ -40,15 +40,42 @@
               <li class="nav-item"><a href="#">How it works</a></li>
               <li class="nav-item"><a href="#">What you get</a></li>
               <li class="nav-item"><a href="#">Things we do</a></li>
-              <li class="nav-item"><a href="#">Resources</a></li>
+              <li class="nav-item dropdown">
+                <a href="#">Resources</a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-menu-item"><a href="#">Resource 1</a></li>
+                  <li class="dropdown-menu-item"><a href="#">Resource 2</a></li>
+                  <li class="dropdown-menu-item"><a href="#">Resource 3</a></li>
+                </ul>
+              </li>
               <li class="nav-item"><a href="#">Why eznatal</a></li>
             </ul>
           </div>
           <div class="cta-button">
             <button class="btn-get-started">Get Started</button>
           </div>
+          <div class="menu-icon">
+            <i class="fa fa-bars"></i>
+          </div>
         </div>
       </div>
+      <div class="menu-container">
+        <ul class="menu-list">
+            <li class="menu-item"><a href="#">How it works</a></li>
+            <li class="menu-item"><a href="#">What you get</a></li>
+            <li class="menu-item"><a href="#">Things we do</a></li>
+            <li class="nav-item dropdown">
+              <a href="#">Resources</a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-menu-item"><a href="#">Resource 1</a></li>
+                <li class="dropdown-menu-item"><a href="#">Resource 2</a></li>
+                <li class="dropdown-menu-item"><a href="#">Resource 3</a></li>
+              </ul>
+            </li>
+            <li class="menu-item"><a href="#">Why eznatal</a></li>
+        </ul>
+    </div>
+    
     </header>
 
     <div class="main">
@@ -155,6 +182,30 @@
         var currentYear = new Date().getFullYear();
         document.getElementById("currentYear").textContent = currentYear;
       });
+
+      let lastScrollTop = 0;
+      const upArrow = document.querySelector(".up-arrow");
+
+      window.addEventListener("scroll", function () {
+        let scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop) {
+          // Scrolling up
+          upArrow.classList.add("show");
+        } else {
+          // Scrolling down
+          upArrow.classList.remove("show");
+        }
+        lastScrollTop = scrollTop;
+      });
+
+      document
+        .querySelector(".menu-icon")
+        .addEventListener("click", function () {
+          document.querySelector(".upper-header").classList.toggle("active");
+          document.querySelector(".menu-container").classList.toggle("active");
+        });
     </script>
   </body>
 </html>
