@@ -1,0 +1,1081 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Styles */
+body, ul, li, a {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: sans-serif, Arial;
+}
+
+/* Header Styles */
+.header {
+  width: 100%;
+  background-color: #ffffff; 
+  position: fixed;
+}
+
+.upper-header {
+  background-color: #f0f0f0; 
+  padding: 10px 0;
+  display: flex;
+  width: 100%;
+  height: 45px;
+}
+
+.upper-header-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
+
+.header-link {
+  margin-right: 40px;
+}
+
+.header-link i{
+  margin-right: 3px;
+  color: #e7344a;
+  font-size: 20px;
+}
+.header-link a {
+  color: #000000; 
+  font-size: 17px;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+
+.lower-header {
+  padding: 10px 0 30px 0;
+}
+
+.lower-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+.logo img {
+  max-width: 200px; /* Adjust the maximum width of the logo */
+  height: auto;     /* Ensure the height scales proportionally */
+  display: block;   /* Removes extra spacing below the image */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .logo img {
+      max-width: 120px; /* Smaller logo on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+      max-width: 100px; /* Even smaller logo on very small screens */
+  }
+}
+
+.nav-menu {
+  flex-grow: 1;
+  margin-left: 30px;
+  padding-top: 15px;
+}
+
+.nav-list {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-item a {
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: expanded;
+  color: #212529;
+}
+
+.nav-item a:hover {
+  color: #e8324a; 
+}
+
+.cta-button {
+  margin-left: auto;
+}
+
+.btn-get-started {
+  padding: 10px 30px;
+  font-size: 16px;
+  background-color: #e8324a; /* Blue background for button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-get-started:hover {
+ box-shadow: 0px 0px 20px rgba(128, 128, 128, 0.5);
+ transition: box-shadow 0.3s ease-in-out 0s;
+}
+
+
+/* Footer Styles */
+.site-footer {
+  background-color: #f5f9fd; 
+  color: #ffffff; /* White text color */
+  padding: 30px 0;
+  font-size: 14px;
+}
+.site-footer-container{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  display: flex;
+  padding: 40px 0px;
+}
+
+.footer-logo img {
+  max-width: 150px;
+  height: auto;
+}
+
+.footer-logo img {
+  max-width: 200px; /* Adjust the maximum width of the logo */
+  height: auto;     /* Ensure the height scales proportionally */
+  display: block;   /* Removes extra spacing below the image */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  
+.footer-logo img{
+      max-width: 250px; /* Smaller logo on smaller screens */
+  }
+}
+
+
+.footer-main {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.footer-column {
+  display: flex;
+  font-size: 17px;
+  margin-bottom: 50px;
+}
+.footer-column-left{
+  width: 300px;
+  padding-right: 100px;
+}
+.footer-column-right{
+padding-left: 190PX;
+padding-right: 50px ;
+}
+.footer-heading {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-item {
+  margin-bottom: 15px;
+}
+
+.footer-item a {
+  color: #adb5bd; /* Light grey text color */
+  transition: color 0.3s ease;
+}
+
+@media only screen and (max-width: 1350px) {
+  .footer-column-right{
+    padding-left: 50PX;
+    padding-right: 20px ;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+  .footer-column-right{
+    padding-left: 30PX;
+    padding-right: 20px ;
+    }
+}
+
+@media only screen and (max-width: 1030px) {
+  .footer-column-right{
+    padding-left: 0PX;
+    padding-right: 20px ;
+    }
+}
+
+/* Tablet View (Max Width: 1024px) */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  .footer-main {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-column {
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .footer-column-left {
+    padding-right: 0;
+    flex-direction: row;
+  }
+
+  .footer-column-right {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* Phone View (Max Width: 768px) */
+@media (max-width: 400px) {
+  .footer-main {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-column {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .footer-column-left,
+  .footer-column-right {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .footer-heading {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .footer-item {
+    margin-bottom: 10px;
+  }
+
+  .footer-item a {
+    font-size: 15px;
+  }
+}
+
+.footer-item a:hover {
+  color: #e8324a; /* White on hover */
+}
+
+.footer-subscribe-text {
+  margin-bottom: 15px;
+  color: #adb5bd;
+}
+
+.subscribe-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 4px;
+  border: 1px solid black;
+  font-size: 1.1em;
+}
+
+.subscribe-button {
+  padding: 10px 20px;
+  background-color: #e8324a; /* Blue background */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 20px;
+}
+
+.subscribe-button:hover {
+  background-color: #b42d3f; /* Darker blue on hover */
+}
+
+.footer-icons {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.icon {
+  display: flex;
+  background-color: #e8324a; 
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.footer-bottom {
+  font-size: 16px;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  color: #adb5bd;
+  
+}
+
+.footer-link {
+  color: #adb5bd; /* Light grey color for footer links */
+  margin-right: 10px;
+  text-decoration: underline;
+}
+
+.up-arrow{
+  display: flex;
+  background-color: #e8324a; 
+  color:#ffffff;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  transition: transform 0.4s ease;
+}
+
+.up-arrow:hover{
+  cursor: pointer;
+  transform: translateY(15px);
+}
+@media (min-height: 700px) {
+  .up-arrow {
+      display: none; 
+  }
+}
+
+/* Main container */
+.main {
+  padding-top: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #f9f9f9; */
+}
+
+/* Content wrapper */
+.main-content {
+  padding-top: 100px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+
+/* Text content */
+.text-content {
+  max-width: 40vw;
+}
+
+.main-title {
+  font-weight: bolder;
+  font-size: 4.3rem;
+  color: #111010;
+  margin-bottom: 20px;
+}
+
+.main-description {
+  font-size: 1.125rem;
+  color: #232323;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+/* Button group */
+.button-group {
+  display: flex;
+  flex-grow: 1;
+  gap: 15px;
+}
+
+.btn-learn-more,
+.btn-see-how {
+  width: auto;
+  padding: 15px 28px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #e8324a;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-learn-more:hover,
+.btn-see-how:hover {
+  background-color: #c7283d;
+}
+
+.fa-long-arrow-right{
+  padding-left: 15px;
+}
+
+/* Image content */
+.image-content {
+  width: 40%;
+}
+
+.main-image {
+  width: 100%;
+  height: 100%;
+  /* display: block; */
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+  .text-content {
+    max-width: 70vw;
+  }
+  .image-content {
+    margin-top: 20px ;
+    width: 70vw;
+  }
+  .button-group {
+   flex-direction: column;
+  }
+}
+
+/* Container for the entire gallery */
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 110px 0;
+}
+
+/* Row of images */
+.gallery-row {
+  display: flex;
+  gap: 15px; /* Space between images */
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .gallery-row {
+    flex-direction: column;
+    gap: 10px; /* Space between images */
+    /* justify-content: space-between; */
+  }
+  .gallery-image {
+    width: 120%;
+    height: 120%;
+  }
+
+}
+
+
+/* Individual gallery item */
+.gallery-item {
+  width: 25vw; 
+  height: auto;
+  text-align: center;
+}
+
+/* Image styling */
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px; /* Optional: add some rounding to the corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow */
+  border: 3px solid white;
+}
+
+/* Main container */
+.platform-content {
+  padding: 60px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+
+/* Text content */
+.platform-text {
+  max-width: 50%;
+}
+
+.platform-title {
+  font-weight: bolder;
+  font-size: 3rem;
+  color: #111010;
+  margin-bottom: 20px;
+  line-height: 4rem;
+}
+
+.platform-description {
+  font-size: 1.125rem;
+  color: #232323;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+/* Button group */
+.platform-button-group {
+  display: flex;
+  gap: 15px;
+}
+
+.platform-btn-learn-more {
+  width: auto;
+  padding: 15px 28px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #e8324a;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.platform-btn-see-how {
+  width: auto;
+  padding: 15px 28px;
+  font-size: 1rem;
+  color: #e8324a;
+  background-color: #fff;
+  border: 1px solid #e8324a;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.platform-btn-learn-more:hover {
+  background-color: #c7283d;
+}
+
+
+.platform-icon-right {
+  padding-left: 15px;
+}
+
+/* Image content */
+.platform-image {
+  width: 40%;
+}
+
+.platform-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Main content section */
+.content-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 70px 0;
+  background-color: #fafdff;
+  width: 100%;
+  margin: 80px 0;
+
+}
+.container{
+  width: 80%;
+  margin: 0 auto;
+  
+}
+
+/* Text content */
+.content-text {
+  max-width: 100%;
+}
+
+.content-title-main {
+  font-size: 3rem;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.content-subtitle {
+  font-size: 1.5rem;
+  color: #08224b;
+  margin-bottom: 15px;
+}
+
+.content-title-secondary {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 23px;
+  border: 2px solid #df2840;
+  width: 200px;
+}
+
+.content-paragraph-main {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+.content-paragraph {
+  font-size: .9rem;
+  color: #363636;
+  margin-bottom: 15px;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+/* Media content */
+.content-media {
+  display: flex;
+  align-items: start;
+  gap: 15px; /* Space between button and image */
+}
+
+.content-button {
+  width: auto;
+  padding: 15px 28px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #e8324a;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.content-button:hover {
+  box-shadow: 0px 0px 20px rgba(128, 128, 128, 0.5);
+  transition: box-shadow 0.3s ease-in-out 0s;
+}
+
+.content-image {
+  width: 20%;
+  height: auto;
+  border-radius: 8px; /* Optional: add rounded corners to the image */
+  padding: 0 10px;
+}
+
+/* Main container for the case study */
+.case-study {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Case study title */
+.case-study-title {
+  font-size: 3rem;
+  color: #111;
+  margin-bottom: 35px;
+}
+
+/* Subtitle for the case study */
+.case-study-subtitle {
+  font-size: 2rem;
+  color: #444;
+  margin-bottom: 25px;
+  border-left: 4px solid #e8324a;
+  flex: 1;
+  height: 100%;
+  padding: 15px;
+}
+
+/* Image wrapper to contain the image */
+.case-study-image-wrapper {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Case study image styling */
+.case-study-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Paragraphs for case study content */
+.case-study-paragraph {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* Main container for the customer profile */
+.customer-profile {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 0 0 20px 20px;
+}
+
+/* Header section for logo and title */
+.customer-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.box{
+  width: 230px;
+  height: 100px;
+}
+
+.customer-logo {
+  width: 75px;
+  margin-bottom: 15px;
+}
+
+.customer-logo-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px; /* Optional: Rounded corners for the logo */
+}
+
+.customer-title {
+  font-size: 1.25rem;
+  color: #4f4e4e;
+  font-weight: bold;
+}
+
+/* Info section */
+.customer-info {
+  margin-bottom: 15px;
+}
+
+.customer-info-title {
+  font-size: 1rem;
+  color: #444;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.customer-info-text {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Main container for the study section */
+.study-section {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Subtitle for the study section */
+.study-subtitle {
+  font-size: 2rem;
+  color: #444;
+  margin-bottom: 25px;
+  border-left: 4px solid #e8324a;
+  flex: 1;
+  height: 100%;
+  padding: 15px;
+}
+
+/* Text paragraphs for the study section */
+.study-text {
+  font-size: 1.05rem;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+/* Main container for the resource center */
+.resource-center {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  max-width: 1200px;
+  width: 80%;
+  padding: 25px 25px;
+  margin: 0 auto;
+}
+
+/* Image wrapper for the resource center */
+.resource-image-wrapper {
+  width: 50%; /* Adjust width as needed */
+}
+
+.resource-image {
+  width: 100%;
+  height: 100%;
+}
+
+/* Content area for the resource center */
+.resource-content {
+  width: 50%; 
+}
+
+/* Title for the resource center content */
+.resource-title {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* List styling */
+.resource-list {
+  margin-left: 20px;
+  margin-bottom: 35px;
+  padding-left: 30px;
+}
+
+.resource-list li {
+  list-style-type: circle;
+
+}
+
+.resource-list-item {
+  margin-bottom: 10px;
+  color: #555;
+  font-size: 1rem;
+}
+
+/* Paragraph styling for resource center content */
+.resource-paragraph-1 {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+.resource-paragraph-2{
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+.resource-paragraph-3 {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+/* Main container for the challenge section */
+.challenge-section {
+  padding: 20px;
+  max-width: 1200px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Title for the challenge section */
+.challenge-title {
+  font-size: 2rem;
+  color: #111;
+  margin-bottom: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: end;
+  border-right: 4px solid #e8324a;
+  flex: 1;
+  height: 100%;
+  padding: 15px;
+}
+
+/* Paragraph styling for the challenge section */
+.challenge-paragraph {
+  font-size: 1.1rem;
+  color: #565454;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.challenge-paragraph-1 {
+  font-size: 1.1rem;
+  color: #565454;
+  line-height: 1.4;
+}
+
+/* Main container for the resource overview */
+.resource-overview {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  max-width: 1200px;
+  width: 80%;
+  padding: 25px 25px;
+  margin: 0 auto;
+}
+
+/* Content area for the resource overview */
+.overview-content {
+  width: 50%;
+}
+
+/* Title for the overview section */
+.overview-title {
+  font-size: 1rem;
+  color: #494848;
+  margin-bottom: 15px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* List styling */
+.overview-list {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.overview-list li{
+  list-style-type: circle;
+}
+
+.overview-list-item {
+  margin-bottom: 10px;
+  color: #555;
+  font-size: 1rem;
+}
+
+/* Image wrapper for the overview section */
+.overview-image-wrapper {
+  width: 50%; /* Adjust width as needed */
+}
+
+.overview-image {
+  width: 100%;
+  height: 100%;
+}
+
+/* Container for the entire solution section */
+.solution-section {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 80%;
+}
+
+/* Title for the solution section */
+.solution-title {
+  font-size: 1.8rem;
+  color: #222;
+  margin-bottom: 20px;
+  font-weight: bold;
+  border-left: 4px solid #e8324a;
+  flex: 1;
+  height: 100%;
+  padding: 15px;
+}
+
+/* Flexbox container for image and text */
+.solution-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Wrapper for the solution image */
+.solution-image-wrapper {
+  width: 35%; /* Adjust width as needed */
+}
+
+/* Image styling */
+.solution-image {
+  width: 95%;
+  height: 95%;
+}
+
+/* Container for the solution text */
+.solution-text {
+ width: 70%;
+}
+
+/* Paragraph styling within the solution text */
+.solution-paragraph {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 2;
+}
+
+/* Container for the entire result section */
+.result-section {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Title for the result section */
+.result-title {
+  font-size: 2rem;
+  color: #535252;
+  margin-bottom: 20px;
+  text-align: end;
+  font-weight: bold;
+  border-right: 4px solid #e8324a;
+  flex: 1;
+  height: 100%;
+  padding: 15px;
+}
+
+/* Flexbox container for image and text */
+.result-content {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+/* Container for the result text */
+.result-text {
+  flex-grow: 1;
+}
+
+/* Paragraph styling within the result text */
+.result-paragraph {
+  font-size: 1.1rem;
+  color: #6e6c6c;
+  margin-bottom: 12px;
+  line-height: 1.4;
+  padding: 15px;
+}
+
+/* Wrapper for the result image */
+.result-image-wrapper {
+  flex-shrink: 0;
+  width: 30%; /* Adjust width as needed */
+  height: 30%;
+}
+
+/* Image styling */
+.result-image {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+

@@ -1,0 +1,130 @@
+.main{
+    padding-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Container for the entire login section */
+.login-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    align-items: end;
+    width: 100%;
+    /* padding-left: 100px; */
+    margin: 0 auto;
+    padding: 40px 130px;
+    background-color: #d1edfb;
+}
+
+/* Wrapper for the login image */
+.login-image-wrapper {
+    /* flex-shrink: 0; */
+    width: 40vw; 
+    height: 60vh;
+}
+
+/* Image styling */
+.login-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+/* Container for the login content */
+.login-content {
+    width: 45%;
+    /* flex-grow: 1; */
+    padding: 40px;
+    background: #fff;
+    border-radius: 8px;
+}
+
+/* Title for the login section */
+.login-title {
+    font-size: 1.5rem;
+    color: #514f4f;
+    margin-bottom: 10px;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+/* Description text */
+.login-description {
+    font-size: 1.125rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Form styling */
+.login-form .form-row {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Login button styling */
+.login-button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.125rem;
+    color: #fff;
+    background-color: #e8324a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #484445;
+}
+
+/* @media (max-width: 1050px) {
+    .login-image-wrapper {
+        width: 60%; 
+    }
+} */
+@media (max-width: 960px) {
+    .login-container {
+        flex-direction: column;
+        padding: 80px 100px;
+    }
+
+    .login-image-wrapper {
+        display: none;
+    }
+
+    .login-content {
+        width: 100%;
+        padding: 30px;
+    }
+}
+
+/* Mobile view */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 80px 50px;
+    }
+
+    .login-content {
+        /* padding: 20px; */
+    }
+}
