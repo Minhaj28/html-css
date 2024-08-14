@@ -1,0 +1,125 @@
+.press-image{
+    display: flex;
+    margin-bottom: 100px;
+    background-color: #fafdff;
+    justify-content: center;
+    width: 100%;
+}
+
+.press-image img{
+    width: 80%;
+    height: auto;
+}
+
+.card-container{
+    display: flex;
+    width: 80%;
+    /* padding-left: 700px; */
+    margin-bottom: 100px;
+    justify-content: flex-end;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    /* padding: 20px; */
+    /* margin: 0 auto; */
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .card-title {
+    width: 100%;
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+    background-color: #e7344a;
+    padding: 10px 50px;
+    border-radius: 3px;
+    line-height: 34px;
+    letter-spacing: 1.5px;
+  }
+  
+  .card-description {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #666;
+    line-height: 25px;
+    padding: 20px;
+  }
+  
+  .card-label {
+    font-size: 1rem;
+    margin-bottom: 16px;
+    color: #333;
+  }
+  
+  .card-input{
+    padding: 0 25px;
+    width: 100%;
+  }
+  .card-input-1 {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+
+  }
+  
+  .card-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #e7344a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 50px;
+  }
+  
+  .card-button:hover {
+    background-color: #af2938;
+  }
+  
+  .card-text {
+    font-size: 1.2rem;
+    color: #292727;
+    margin-bottom: 5px;
+  }
+  
+  .press-icon {
+    gap: 15px;
+    margin-top: 15px;
+    margin-bottom: 50px;
+  }
+  
+  .icon i {
+    font-size: 24px;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+ 
+  
+
+@media (max-width: 950px) {
+    .main{
+        padding-top: 30px;
+    }
+    .card-container{
+      justify-content: center;
+    }
+    .card{
+      width: 100%;
+    }
+}

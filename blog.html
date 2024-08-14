@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
-  />
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
     <title>eznatal-AI + CRM Solution for Birth Centers</title>
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/login.css" />
-
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/animation-index.css" />
+    <link rel="stylesheet" href="css/blog.css" />
   </head>
   <body>
     <header class="header">
@@ -82,27 +82,9 @@
     </header>
 
     <div class="main">
-      <div class="login-container">
-        <div class="login-image-wrapper">
-            <img src="images/login/support.png" alt="Support Image" class="login-image">
+        <div class="blog-image">
+          <img src="images/blog/blog.png" alt="blog">
         </div>
-        <div class="login-content">
-            <h1 class="login-title">Welcome to eznatal</h1>
-            <p class="login-description">Login to access your store</p>
-            <form action="" class="login-form">
-                <div class="form-row">
-                    <label for="email" class="form-label">Email</label>
-                    <input id="email" name="email" type="email" class="form-input">
-                </div>
-                <div class="form-row">
-                    <label for="password" class="form-label">Password</label>
-                    <input id="password" name="password" type="password" class="form-input">
-                </div>
-                <button class="login-button">Login</button>
-            </form>
-        </div>
-    </div>
-    
     </div>
 
     <footer class="site-footer">
@@ -177,7 +159,7 @@
       </div>
     </footer>
     <div class="up-arrow">
-      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+      <i class="fa fa-arrow-up"></i>
     </div>
 
     <script>
@@ -186,21 +168,20 @@
         document.getElementById("currentYear").textContent = currentYear;
       });
 
-      let lastScrollTop = 0;
       const upArrow = document.querySelector(".up-arrow");
 
       window.addEventListener("scroll", function () {
-        let scrollTop =
+        const scrollTop =
           window.pageYOffset || document.documentElement.scrollTop;
+        const viewportHeight = window.innerHeight / 2;
 
-        if (scrollTop > lastScrollTop) {
-          // Scrolling up
+        if (scrollTop > viewportHeight) {
+          // Scrolled more than 100vh
           upArrow.classList.add("show");
         } else {
-          // Scrolling down
+          // Scrolled less than 100vh
           upArrow.classList.remove("show");
         }
-        lastScrollTop = scrollTop;
       });
 
       document
@@ -209,6 +190,27 @@
           document.querySelector(".upper-header").classList.toggle("active");
           document.querySelector(".menu-container").classList.toggle("active");
         });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const textContent = document.querySelector(".text-content");
+
+        const observerOptions = {
+          root: null, // Use the viewport as the container
+          threshold: 0.1, // Trigger when 10% of the element is visible
+        };
+
+        const observer = new IntersectionObserver(function (entries, observer) {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("animate");
+              observer.unobserve(entry.target); // Stop observing once animation is triggered
+            }
+          });
+        }, observerOptions);
+
+        observer.observe(textContent);
+
+      });
     </script>
   </body>
 </html>
