@@ -2,10 +2,6 @@
     padding-top: 120px;
 }
 
-.nav-menu{
-    padding-left: 20px;
-    letter-spacing: .8px;
-}
 
 @media (max-width: 950px) {
     .main{

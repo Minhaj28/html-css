@@ -1,3 +1,4 @@
+
 .press-image{
     display: flex;
     margin-bottom: 100px;
@@ -34,7 +35,7 @@
     text-align: center;
   }
   
-  .card-title {
+  .card-titles {
     width: 100%;
     font-size: 1.7rem;
     margin-bottom: 10px;
@@ -43,7 +44,7 @@
     padding: 10px 50px;
     border-radius: 3px;
     line-height: 34px;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.2px;
   }
   
   .card-description {
