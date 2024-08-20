@@ -129,3 +129,64 @@
         width: 100%;
     }
 }
+
+
+.access-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+.access-content {
+    display: flex;
+    width: 80%;
+    gap: 30px;
+}
+
+.access-text {
+    width: 68%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.access-title {
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.access-description {
+    font-size: 1.13rem;
+    margin-bottom: 15px;
+    color: #747171;
+}
+
+.access-image {
+    width: 32%;
+}
+
+.access-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+@media (max-width: 950px) {
+    .access-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .access-image {
+        width: 100%;
+    }
+
+    .access-text {
+        width: 100%;
+    }
+}
