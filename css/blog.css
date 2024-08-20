@@ -9,7 +9,7 @@
 }
 
 .blog-image img{
-    width: 100%;
+    width: 80%;
     height: auto;
 }
 
@@ -17,4 +17,9 @@
     .main{
         padding-top: 30px;
     }
+}
+
+.nav-menu{
+    padding-left: 20px;
+    letter-spacing: .8px;
 }
