@@ -1,8 +1,255 @@
 .main{
-    padding-top: 150px;
+    padding-top: 120px;
 }
 
 .nav-menu{
     padding-top: 0;
     margin-left: 0;
 }
+
+.header-bar {
+    padding: 20px 50px 30px 20px;
+  }
+  
+  .header-bar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+  
+  .brand-logo img {
+    width: 300px;
+    height: auto;
+    display: block;
+  }
+  
+  .menu-list {
+    margin-top: 5px;
+    margin-left: 11%;
+  }
+
+  @media (max-width: 1250px) {
+    .menu-list {
+        margin-left: 5%;
+      }
+  }
+  
+  .item-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+
+  .item-link a {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #484949;
+  }
+  
+  .item-link a:hover {
+    color: #b69da1;
+  }
+  
+  .action-button {
+    /* margin-left: auto; */
+  }
+  
+  .btn-start {
+    text-align: center;
+    padding: 5px 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    background-color: #e8324a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-start:hover {
+    background-color: #f66e79;
+  }
+  
+  .icon-menu {
+    display: none; /* Hide by default */
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+
+.navigation-container {
+    width: 100%;
+    margin-bottom: 20px;
+    /* display: none; */
+}
+
+.navigation-list {
+    list-style: none;
+    padding: 0;
+    margin-left: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation-item {
+    width: 100%;
+    padding: 5px 0;
+}
+
+.navigation-item a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #707274;
+    font-weight: 600;
+    display: block;
+}
+
+.navigation-item a:hover {
+    color: #e8324a;
+}
+
+@media (min-width: 950px) {
+    .navigation-container {
+        display: none;
+    }
+}
+
+@media (max-width: 950px) {
+    .menu-list,
+    .action-button,
+    .navigation-container {
+        display: none;
+    }
+    .icon-menu {
+        display: block;
+      }
+
+      .header-bar {
+        padding: 20px 0 30px 0;
+      }
+      .header-bar-container {
+        margin-right: 25px;
+        margin-left: 25px;
+      }
+      .brand-logo img {
+        width: 230px;
+      }
+}
+
+
+.login-button-container {
+    padding: 0 40px;
+}
+
+.btn-login {
+    background-color: #e8324a;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    padding: 5px 25px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1.1rem;
+}
+
+.btn-login:hover {
+    background-color: #f66e79;
+}
+
+.navigation-container.active {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  .support-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 340px;
+    background-color: #d1edfb;
+    position: relative;
+    margin-bottom: 100px;
+  }
+  
+  .support-images {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 40px;
+    width: 100%;
+    height: 340px;
+  }
+  
+  .support-images img {
+    width: auto;
+    height: 80%;
+  }
+  
+  .support-content {
+    position: absolute;
+    text-align: center;
+    top: 60px;
+    width: 100%;
+  }
+
+  .support-content h1{
+    font-size: 4rem;
+    margin-bottom: 30px;
+  }
+  
+  .search-bar {
+    position: relative;
+    margin: 0 25%;
+  }
+  
+  .search-bar input[type="text"] {
+    width: 100%;
+    padding: 8px 50px 8px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: none;
+  }
+
+  .search-bar input {
+    outline: none;
+  }
+  .search-bar input::placeholder {
+    font-size: 1.15rem;
+  }
+
+  
+  
+  .search-bar .search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #333;
+    padding: 0 10px;
+  }
+  
+  @media (max-width: 950px) {
+    .support-images {
+      display: none;
+    }
+  
+    .support-content h1{
+        font-size: 3rem;
+      }
+      
+      .search-bar {
+        margin: 0 10%;
+      }
+  }
+  
