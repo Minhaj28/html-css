@@ -84,13 +84,16 @@
 }
 
 .content-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
     width: 100%;
     margin: 0 auto;
 }
 
 .content-title {
     text-align: center;
-    font-size: 34px;
+    font-size: 2.6rem;
     line-height: 1.5;
     font-weight: 600;
     color: #333;
